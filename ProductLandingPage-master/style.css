@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    /* text-align: center; */
+
+}
+
+h1 {
+    font-weight: 400;
+    font-family: 'Sacramento', cursive;
+    font-size:  200px;
+    letter-spacing: 0.5rem;
+    color:#DAA520;
+}
+h2 {
+  font-weight: 400;
+  font-family: 'Sacramento', cursive;
+  font-size:  100px;
+  letter-spacing: 0.5rem;
+  color:#DAA520;
+  text-align: center;
+}
+
+p{
+  color: #c4c4c4;
+  font-size: 1.5rem;
+  margin-top: 2em;
+}
+header {
+  display: grid;
+  grid-template-columns: 20vw auto;
+  
+}
+
+
+nav {
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 20vw;
+  position: fixed;
+  height: 100%;
+  grid-area: header;
+}
+
+.nav-link {
+  color: #DAA520;
+  font-size: 1.25rem;
+  transition: all 0.8s;
+}
+
+.nav-link:hover {
+  background: rgb(151, 117, 29);
+  color: #fff;
+  margin-left: 1em;
+  transition: 0.8s;
+}
+
+.nav-link:focus {
+  background: rgb(151, 117, 29);
+  color: #fff;
+  margin-left: 1em;
+}
+main {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  grid-column-start: 2;
+  overflow: auto;
+  grid-area: content;
+}
+
+/* Start of Sections */
+  #home {
+    padding: 5em;
+    margin-bottom: 5em;
+  }
+  #collections {
+    
+    
+  }
+  
+  #video-section {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+   
+  }
+
+  #video {
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height:100%;
+  }
+
+
+  
+  #contact {
+    padding: 5em;
+    margin-bottom: 5em;
+  }
+
+
+  /* End of Sections */
+  /* Contact Form */
+  form {
+    display: flex;
+    justify-content: center;
+  }
+.form-items {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+label {
+  text-align: left;
+  padding: 5px 0;
+  color: #DAA520;
+}
+
+input[type="email"]{
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #DAA520;
+  font-size: 1.2rem;
+  
+  
+}
+
+
+.form-items #submit {
+  border-radius: 5px;
+  margin: 20px 0 0 0;
+  padding: 10px;
+  width: 300px;
+  color: #DAA520;
+}
+
+#submit:hover {
+  background: #DAA520;
+  color: #fff;
+}
+
+/* end of contact form */
+
+/* Content and Navigation classes */
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.navigation a {
+  position: relative;
+  padding: 2em;
+  margin-top: 1em;
+  text-align: right;
+}
+/* End of classes */
+
+
+/* Image/Logo  */
+#header-img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.logo {
+  text-align:center;
+}
+/* End of image/logo */
+
+footer {
+  color: #DAA520;
+  text-align: right;
+  font-size: 1.25rem;
+}
+
+
+/* Mosaic Effect collections */
+
+.mosaic{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 0.25rem;
+    grid-auto-flow: dense;
+}
+
+.mosaic-items img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+}
+
+.mosaic-items img:hover {
+  transform: scale(1.1);
+}
+
+/* End of mosaic */
+
+/* Media Queries */
+@media(max-width: 900px) {
+  header {
+    display: flex;
+    /* flex-direction: column; */
+  }
+ nav {
+   display: flex;
+   flex-direction: row;
+   background: #FFF;
+   height: inherit;
+   width: 100%;
+   z-index: 1;
+   justify-content: space-between;
+   
+ }
+
+ .navigation {
+
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+ }
+
+ .nav-link {
+  color: #DAA520;
+ }
+ #header-img {
+   width: 100px;
+   height: 100px;
+ }
+
+ main {
+   background: red;
+   position: absolute;
+   top: 7em;
+   left: 1em;
+   right: 1em;
+ }
+
+
+}
+
+
+
+
+
+@media(max-width: 455px) {
+
+  header {
+   
+  }
+nav {
+  background-color: black;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+   height: 200px;
+
+
+}
+  .navigation {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    height: inherit;
+   
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    top: 14em;
+
+
+ 
+  }
+
+  .content {
+   display: flex;
+   flex-direction: column;
+  }   
+
+}
+
+
+/*Mosaic Effect queries*/
+@media screen and (max-width: 650px){
+    .mosaic{
+        display: block;
+    }
+    .mosaic-items{
+        margin-bottom: 1rem;
+    }
+}
+
+/* End of Queries */
+
+
